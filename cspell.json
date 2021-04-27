@@ -1,0 +1,11 @@
+{
+  "version": "0.1",
+  "words": [
+    "browserslist",
+    "webdeveric"
+  ],
+  "ignorePaths": [
+    "package-lock.json",
+    "node_modules/**"
+  ]
+}
