@@ -1,11 +1,17 @@
 'use strict';
 
 module.exports = {
-  development: [ 'last 1 version' ],
+  development: [
+    'last 1 versions',
+    'not dead',
+    'not op_mini all',
+    'not ie <= 11',
+    'not ie_mob <= 11',
+  ],
   production: [
-    'last 3 versions',
-    'ie >= 11',
-    'not ie < 11',
+    'defaults',
+    'not op_mini all',
+    'not ie <= 11',
     'not ie_mob <= 11',
   ],
 };
