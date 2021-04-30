@@ -1,22 +1,35 @@
 #! /usr/bin/env node
 'use strict';
 
+const path = require('path');
 const browserslist = require('browserslist');
 
-function printConfig(header, config ) {
-  console.group( header );
+const logItem = item => console.log( item );
 
-  if ( typeof config === 'string' || Array.isArray( config ) ) {
-    browserslist( config ).forEach( browser => console.log( browser ) );
-  } else if ( typeof config === 'object' && config !== null ) {
-    for ( const [ envName, data ] of Object.entries( config ) ) {
-      printConfig( envName, data );
-    }
-  }
+const getBrowsers = ( config, env ) => browserslist(
+  `extends ${config}`,
+  {
+    dangerousExtend: true,
+    env,
+  },
+);
+
+const environments = [ 'development', 'production' ];
+
+const configs = new Map([
+  [ 'Default', path.resolve( __dirname, '../index.js' ) ],
+  [ 'Node', path.resolve( __dirname, '../node.js' ) ],
+  [ 'Web Extensions', path.resolve( __dirname, '../web-extensions.js') ],
+]);
+
+configs.forEach( (config, name) => {
+  console.group( name );
+
+  environments.forEach( env => {
+    console.group( env );
+    getBrowsers( config, env ).forEach( logItem );
+    console.groupEnd();
+  });
 
   console.groupEnd();
-}
-
-printConfig('Default config', require('../index.js') );
-printConfig('Node config', require('../node.js') );
-printConfig('Web Extensions config', require('../web-extensions.js') );
+});

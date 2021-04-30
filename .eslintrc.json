@@ -2,7 +2,7 @@
   "extends": "@webdeveric/eslint-config",
   "env": {
     "browser": false,
-    "es6": false,
+    "es6": true,
     "mocha": false,
     "node": true
   }
