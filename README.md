@@ -4,11 +4,23 @@
 npm install @webdeveric/browserslist-config -D
 ```
 
-Add this to your `package.json`.
+Add one of these to your `package.json`.
 
 ```
 "browserslist": [
   "extends @webdeveric/browserslist-config"
+],
+```
+
+```
+"browserslist": [
+  "extends @webdeveric/browserslist-config/node"
+],
+```
+
+```
+"browserslist": [
+  "extends @webdeveric/browserslist-config/web-extensions"
 ],
 ```
 
