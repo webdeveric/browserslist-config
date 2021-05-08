@@ -42,12 +42,12 @@
   },
   "devDependencies": {
     "@webdeveric/eslint-config": "^0.1.2",
-    "browserslist": "^4.9.1",
+    "browserslist": "^4.16.6",
     "chai": "^4.2.0",
-    "cspell": "^5.3.12",
+    "cspell": "^5.4.0",
     "eslint": "^7.25.0",
     "husky": "^6.0.0",
-    "lint-staged": "^10.5.4",
-    "mocha": "^8.3.2"
+    "lint-staged": "^11.0.0",
+    "mocha": "^8.4.0"
   }
 }
