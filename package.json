@@ -41,13 +41,13 @@
     "*.js": "eslint --fix"
   },
   "devDependencies": {
-    "@webdeveric/eslint-config": "^0.1.2",
-    "browserslist": "^4.16.6",
-    "chai": "^4.2.0",
-    "cspell": "^5.4.0",
-    "eslint": "^7.25.0",
-    "husky": "^6.0.0",
-    "lint-staged": "^11.0.0",
-    "mocha": "^8.4.0"
+    "@webdeveric/eslint-config": "^0.2.4",
+    "browserslist": "^4.21.4",
+    "chai": "^4.3.7",
+    "cspell": "^6.16.0",
+    "eslint": "^8.29.0",
+    "husky": "^8.0.2",
+    "lint-staged": "^13.0.4",
+    "mocha": "^10.1.0"
   }
 }
